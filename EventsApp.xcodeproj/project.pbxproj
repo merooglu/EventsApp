@@ -30,6 +30,7 @@
 		91CAF398246C2642009916A6 /* EventCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91CAF397246C2642009916A6 /* EventCellViewModel.swift */; };
 		91CAF39A246C284A009916A6 /* EventCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91CAF399246C284A009916A6 /* EventCell.swift */; };
 		91CAF39C246C2C6D009916A6 /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91CAF39B246C2C6D009916A6 /* UIView+Extensions.swift */; };
+		91CAF39E246C4EE0009916A6 /* Date+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91CAF39D246C4EE0009916A6 /* Date+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,6 +59,7 @@
 		91CAF397246C2642009916A6 /* EventCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventCellViewModel.swift; sourceTree = "<group>"; };
 		91CAF399246C284A009916A6 /* EventCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventCell.swift; sourceTree = "<group>"; };
 		91CAF39B246C2C6D009916A6 /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
+		91CAF39D246C4EE0009916A6 /* Date+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,6 +136,7 @@
 				91CAF3792467D747009916A6 /* UIColor+Extensions.swift */,
 				91CAF3892467EF27009916A6 /* UIViewController+Extensions.swift */,
 				91CAF39B246C2C6D009916A6 /* UIView+Extensions.swift */,
+				91CAF39D246C4EE0009916A6 /* Date+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -231,6 +234,7 @@
 			files = (
 				91CAF38F24683861009916A6 /* TitleSubtitleCellViewModel.swift in Sources */,
 				91CAF3742467CCB5009916A6 /* AppCoordinator.swift in Sources */,
+				91CAF39E246C4EE0009916A6 /* Date+Extensions.swift in Sources */,
 				91CAF39C246C2C6D009916A6 /* UIView+Extensions.swift in Sources */,
 				91CAF3782467D353009916A6 /* EventListViewController.swift in Sources */,
 				91CAF3602467CB92009916A6 /* AppDelegate.swift in Sources */,

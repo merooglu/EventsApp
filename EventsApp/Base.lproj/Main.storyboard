@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -66,6 +66,41 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bkq-ez-hHj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="962" y="137"/>
+        </scene>
+        <!--Event Detail View Controller-->
+        <scene sceneID="GRa-1O-cxN">
+            <objects>
+                <viewController storyboardIdentifier="EventDetailViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="6SJ-4b-0sq" customClass="EventDetailViewController" customModule="EventsApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="vlt-R9-CEV">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="KY2-Ga-fHH">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="110" placeholderIntrinsicHeight="200" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="fsn-Vo-UWT" customClass="TimeRemainingStackView" customModule="EventsApp" customModuleProvider="target">
+                                <rect key="frame" x="152" y="348" width="110" height="200"/>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="KY2-Ga-fHH" secondAttribute="bottom" id="B9E-YY-lxz"/>
+                            <constraint firstItem="KY2-Ga-fHH" firstAttribute="top" secondItem="vlt-R9-CEV" secondAttribute="top" id="Nrz-WT-qSz"/>
+                            <constraint firstItem="fsn-Vo-UWT" firstAttribute="centerY" secondItem="vlt-R9-CEV" secondAttribute="centerY" id="fTF-Cb-Jof"/>
+                            <constraint firstAttribute="trailing" secondItem="KY2-Ga-fHH" secondAttribute="trailing" id="i38-Yt-kkt"/>
+                            <constraint firstItem="KY2-Ga-fHH" firstAttribute="leading" secondItem="vlt-R9-CEV" secondAttribute="leading" id="jjf-nf-yEF"/>
+                            <constraint firstItem="fsn-Vo-UWT" firstAttribute="centerX" secondItem="vlt-R9-CEV" secondAttribute="centerX" id="np3-0J-Ymp"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="tcg-ru-66s"/>
+                    </view>
+                    <connections>
+                        <outlet property="backgroundImageView" destination="KY2-Ga-fHH" id="Hxe-Qu-GRx"/>
+                        <outlet property="timeRemainingStackView" destination="fsn-Vo-UWT" id="UiI-rm-eYL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Viw-az-DN0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1741" y="132"/>
         </scene>
     </scenes>
 </document>

@@ -11,7 +11,8 @@ import UIKit
 final class ImagePickerCoordinator: NSObject, Coordinator {
     private(set) var childCoordinators: [Coordinator] = []
     private let navigationCoordinator: UINavigationController
-    var parentCoordinator: AddEventCoordinator?
+    var parentCoordinator: Coordinator?
+    var onFinishPicking: (UIImage) -> Void = { _ in }
     
     init(navigationCoordinator: UINavigationController) {
         self.navigationCoordinator = navigationCoordinator
@@ -21,7 +22,6 @@ final class ImagePickerCoordinator: NSObject, Coordinator {
         let imagePickerController = UIImagePickerController()
         imagePickerController.delegate = self
         navigationCoordinator.present(imagePickerController, animated: true, completion: nil)
-        
     }
     
 }
@@ -29,7 +29,7 @@ final class ImagePickerCoordinator: NSObject, Coordinator {
 extension ImagePickerCoordinator: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         if let image = info[.originalImage] as? UIImage {
-            parentCoordinator?.didFinishPicking(image)
+            onFinishPicking(image)
         }
         parentCoordinator?.childDidFinish(self)
     }

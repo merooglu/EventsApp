@@ -26,16 +26,12 @@ final class EventDetailViewController: UIViewController {
             self.timeRemainingStackView.update(with: timeRemainingViewModel)
             // time remaining labels, event name and date label
         }
-        
+        navigationItem.rightBarButtonItem = .init(image: UIImage(systemName: "pencil"), style: .plain, target: viewModel, action: #selector(viewModel.editButtonTapped))
         viewModel.viewDidLoad()
     }
     
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
         viewModel.viewDidDisappear()
-    }
-    
-    deinit {
-        print("detail controller deinit")
     }
 }

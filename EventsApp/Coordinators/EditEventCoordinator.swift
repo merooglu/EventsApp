@@ -8,6 +8,10 @@
 
 import UIKit
 
+protocol EventUpdatingCoordinator {
+    var onUpdateEvent: () -> Void { get }
+}
+
 final class EditEventCoordinator: Coordinator {
     private(set) var childCoordinators: [Coordinator] = []
     
@@ -15,7 +19,7 @@ final class EditEventCoordinator: Coordinator {
     private let event: Event
     private var completion: (UIImage) -> Void = { _ in }
     
-    var parentCoordinator: EventDetailCoordinator?
+    var parentCoordinator: (EventDetailCoordinator & Coordinator)?
     
     init(event: Event, navigationController: UINavigationController) {
         self.event = event
@@ -26,7 +30,7 @@ final class EditEventCoordinator: Coordinator {
     func start() {
         let editEventViewController: EditEventViewController = .instantiate()
         let editEventViewModel = EditEventViewModel(event: event, cellBuilder: EventsCellBuilder())
-        editEventViewModel.coordinator = self
+        editEventViewModel.coordinator = self    
         editEventViewController.viewModel = editEventViewModel
         navigationController.pushViewController(editEventViewController, animated: true)
     }
